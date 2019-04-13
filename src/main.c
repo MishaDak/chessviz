@@ -4,7 +4,11 @@
 
 int main()
 {
-   while (1) {  
+  printdesk();
+  while (1) {
+      printf("Белые фигуры(Заглавные буквы): ");
+      scanan(1);
+      move();  
       printdesk();
       scanan();
   }  

@@ -3,22 +3,33 @@
 #include <string.h>
 
 extern chartoint(char input[5]);
-char input[7];
 int x1,y2,y1,Yy;
 
-void scanan()
+void scanan(int flag)
 {
-    printf("Введите координаты: ");
-    fgets(input, 7, stdin);
-    if (chartoint(input)) {
-        printf("Правильно\n");
-        if (white()){
-            move();
-        } else{
-            printf("Не правильно походил\n");
+    char input[7] = 'NULL';
+    while (1) {
+        while(1) {
+            fgets(input, 7, stdin);
+            if (chartoint(input)) {
+                break;
+            }
+            printf("Введите заново: ")ж
         }
-    } else {
-        printf("Не правильно\n");
+        if (flag == 1) {
+            if (white() == 1) {
+                break;
+            } else {
+                printf("Введите заново: ")
+            }
+        }
+        if (flag == 2) {
+            if (black() == 1) {
+                break;
+            } else {
+                printf("Введите заново: ")
+            }
+        }
     }
 }
 
@@ -36,15 +47,21 @@ int chartoint(char input[7])
 
 int white(){
     if (desk[y1][x1] > 64 && desk[y1][x1 <73) {
-        return 0;
+        return 0; //Не рубим свои фигуры
     }
     switch (desk[y1][x1]) {
         case 'P':
             if ((desk[y2][x2] == ' ') && (y1 == 1) && (x1 == x2) && (y2 - y1 > 0) && (y2 - y1 < 3)) {
-                return 1;
+                return 1; //Первый ход
             }
+            if ((desk[y2][x2] == ' ') && (x2 == x1) && (y2 - y1 == 1)) {
+                return 1; //Ход по пустым клеткам
+            }
+            if ((desk[y2][x2] > 'a' && desk[y2][x2] < 's') && ((x2 - x1 == 1) || (x2 - x1 == -1)) && (y2 - y1 == 1)) {
+                return 1; // Рубим фигуры опонента
+            }
+        return 0;
     }
-    return 0;
 }
 
 void move(){
