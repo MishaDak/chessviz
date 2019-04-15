@@ -10,7 +10,7 @@ int main()
       scanan(1);
       move();  
       printdesk();
-      printf("Чёрные фигуры(Строчные буквы)")
+      printf("Чёрные фигуры(Строчные буквы)");
       scanan(2);
       move();
       printdesk();
