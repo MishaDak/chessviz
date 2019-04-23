@@ -12,7 +12,7 @@ char desk[8][8] = {{'R', 'N', 'B', 'K', 'Q', 'B', 'N', 'R'},
 
 void printdesk()
 {
-    int i,j;
+    int i, j;
     for (i = 7; i >= 0; i--) {
         printf("%d ", i + 1);
         for (j = 0; j < 8; j++) {
