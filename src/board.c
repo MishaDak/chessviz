@@ -72,6 +72,32 @@ int white()
             return 1;
         }
         break;
+    case 'N':
+            if ((Y1-Y2 == 2) && (X1-X2 == 1)) {
+                return 1;
+            }
+            if ((Y2-Y1 == 2) && (X2-X1 == 1)) {
+                return 1;
+            }
+            if ((Y2-Y1 == 2) && (X1-X2 == 1)) {
+                return 1;
+            }
+            if ((Y1-Y2 == 2) && (X2-X1 == 1)) {
+                return 1;
+            }
+            if ((Y1-Y2 == 1) && (X2-X1 == 2)) {
+                return 1;
+            }
+            if ((Y2-Y1 == 1) && (X2-X1 == 2)) {
+                return 1;
+            }
+            if ((Y1-Y2 == 1) && (X1-X2 == 2)) {
+                return 1;
+            }
+            if ((Y2-Y1 == 1) && (X1-X2 == 2)) {
+                return 1;
+            }
+            break;
     }
     return 0;
 }
@@ -102,6 +128,32 @@ int black()
             return 1;
         }
         break;
+    case 'n':
+        if ((Y1-Y2 == 2) && (X1-X2 == 1)) {
+            return 1;
+        }
+            if ((Y2-Y1 == 2) && (X2-X1 == 1)) {
+                return 1;
+            }
+            if ((Y2-Y1 == 2) && (X1-X2 == 1)) {
+                return 1;
+            }
+            if ((Y1-Y2 == 2) && (X2-X1 == 1)) {
+                return 1;
+            }
+            if ((Y1-Y2 == 1) && (X2-X1 == 2)) {
+                return 1;
+            }
+            if ((Y2-Y1 == 1) && (X2-X1 == 2)) {
+                return 1;
+            }
+            if ((Y1-Y2 == 1) && (X1-X2 == 2)) {
+                return 1;
+            }
+            if ((Y2-Y1 == 1) && (X1-X2 == 2)) {
+                return 1;
+            }
+            break;
     }
     return 0;
 }
