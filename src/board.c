@@ -339,7 +339,7 @@ int checkWin(int status) {
     int i, j, player = 0;
     if (status == 1) {
         for (i = 0; i < 8; i++) {
-            for (j = 0; j < ; j++) {
+            for (j = 0; j < 8; j++) {
                 if (desk[i][j] == 'q') {
                     player = 1;
                 }
