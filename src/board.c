@@ -34,8 +34,7 @@ void scanan(int flag)
 }
 
 int chartoint(char input[7]) {
-    if ((input[2] != '-') && (input[
-] != 'x')) {
+    if ((input[2] != '-') && (input[2] != 'x')) {
         return 0;
     }
     X1 = (int)input[0] - 'A';
@@ -243,8 +242,7 @@ void move() {
     desk[Y1][X1] = ' ';
 }
 
-int checkY()
-{
+int checkY() {
     int i, c1 = Y1, c2 = Y2;
     if (X1 != X2) {
         return 0;
@@ -252,9 +250,9 @@ int checkY()
     if (Y1 > Y2) {
         c1 = Y2;
 
-            }
+    }
     for (i = c1 + 1; i < c2; i++)
-
+    {
         if ((desk[i][X1] > 'a' && desk[i][X1] < 's')
             || (desk[i][X1] > 'A' && desk[i][X1] < 'S')) {
             return 0;
@@ -274,8 +272,7 @@ int checkX() {
     }
     for (i = c1 + 1; i < c2; i++) {
         if ((desk[Y1][i] > 'a' && desk[Y1][i] < 's')
-            || (des
-[Y1][i] > 'A && desk[Y1][i] < 'S')) {
+            || (desk[Y1][i] > 'A' && desk[Y1][i] < 'S')) {
             return 0;
         }
     }
@@ -329,8 +326,7 @@ void transformPawn()
     }
     if ((desk[Y1][X1] == 'P') && (Y2 == 7)) {
         while (1) {
-            print
-                ("Введите в какую фигуру вревратить:");
+            printf("Введите в какую фигуру вревратить:");
             npawn = getchar();
             if ((npawn == 'R') || (npawn == 'N') || (npawn == 'B') || (npawn == 'Q')) {
                 desk[Y1][X1] = npawn;
@@ -346,8 +342,7 @@ int checkWin(int status) {
     int i, j, player = 0;
     if (status == 1) {
         for (i = 0; i < 8; i++) {
-            for (j = 0
-                 j < 8; j++) {
+            for (j = 0;j < 8; j++) {
                 if (desk[i][j] == 'q') {
                     player = 1;
                 }
