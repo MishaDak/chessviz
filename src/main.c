@@ -2,7 +2,8 @@
 #include "board_print_plain.h"
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int status = 0;
 
     printf(" Шахматы\n");

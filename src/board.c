@@ -6,7 +6,8 @@ extern char desk[8][8];
 int X1, X2, Y1, Y2;
 extern char input[7];
 
-void scanan(int flag) {
+void scanan(int flag)
+{
     while (1) {
         while (1) {
             fgets(input, 7, stdin);
@@ -33,7 +34,8 @@ void scanan(int flag) {
 }
 
 int chartoint(char input[7]) {
-    if ((input[2] != '-') && (input[2] != 'x')) {
+    if ((input[2] != '-') && (input[
+] != 'x')) {
         return 0;
     }
     X1 = (int)input[0] - 'A';
@@ -52,7 +54,8 @@ int chartoint(char input[7]) {
 
 int white() {
     if ((desk[Y2][X2] > 'A') && (desk[Y2][X2] < 'S')) {
-        return 0;
+
+  return 0;
     }
     switch (desk[Y1][X1]) {
     case 'P':
@@ -149,7 +152,8 @@ int black() {
     }
     switch (desk[Y1][X1]) {
     case 'p':
-        if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
+        if ((input[2] == '-')
+&& (desk[Y2][X2] != ' ')) {
             printf("Вроде надо рубить?\n");
             break;
         }
@@ -247,9 +251,10 @@ int checkY()
     }
     if (Y1 > Y2) {
         c1 = Y2;
-        c2 = Y1;
-    }
-    for (i = c1 + 1; i < c2; i++) {
+
+            }
+    for (i = c1 + 1; i < c2; i++)
+
         if ((desk[i][X1] > 'a' && desk[i][X1] < 's')
             || (desk[i][X1] > 'A' && desk[i][X1] < 'S')) {
             return 0;
@@ -269,7 +274,8 @@ int checkX() {
     }
     for (i = c1 + 1; i < c2; i++) {
         if ((desk[Y1][i] > 'a' && desk[Y1][i] < 's')
-            || (desk[Y1][i] > 'A' && desk[Y1][i] < 'S')) {
+            || (des
+[Y1][i] > 'A && desk[Y1][i] < 'S')) {
             return 0;
         }
     }
@@ -323,7 +329,8 @@ void transformPawn()
     }
     if ((desk[Y1][X1] == 'P') && (Y2 == 7)) {
         while (1) {
-            printf("Введите в какую фигуру вревратить:");
+            print
+                ("Введите в какую фигуру вревратить:");
             npawn = getchar();
             if ((npawn == 'R') || (npawn == 'N') || (npawn == 'B') || (npawn == 'Q')) {
                 desk[Y1][X1] = npawn;
@@ -339,7 +346,8 @@ int checkWin(int status) {
     int i, j, player = 0;
     if (status == 1) {
         for (i = 0; i < 8; i++) {
-            for (j = 0; j < 8; j++) {
+            for (j = 0
+                 j < 8; j++) {
                 if (desk[i][j] == 'q') {
                     player = 1;
                 }
@@ -349,7 +357,8 @@ int checkWin(int status) {
     if (status == 2) {
         for (i = 0; i < 8; i++) {
             for (j = 0; j < 8; j++) {
-                if (desk[i][j] == 'Q') {
+
+       if (desk[i][j] == 'Q') {
                     player = 2;
                 }
             }
