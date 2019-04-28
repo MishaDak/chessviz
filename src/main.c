@@ -6,7 +6,7 @@ int main()
 {
     int status = 0;
 
-    printf(" Шахматы\n");
+    printf("     Шахматы\n");
     printf("Пример обычного хода: E2-E4\n");
     printf("Пример хода взятия: E2xE4\n");
 
@@ -17,7 +17,7 @@ int main()
         scanan(1);
         move();
         printdesk();
-        status = checkWin(1);
+        status = checkWIn(1);
         if (status != 0) {
             break;
         }
@@ -26,11 +26,13 @@ int main()
         scanan(2);
         move();
         printdesk();
-        status = checkWin(2);
+        status = checkWIn(2);
         if (status != 0) {
             break;
         }
     }
-    printf("Игрок %d win\n", status);
+
+    printf("Player %d win\n", status);
+
     return 0;
 }
