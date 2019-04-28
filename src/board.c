@@ -334,3 +334,30 @@ void transformPawn()
         }
     }
 }
+
+int checkWin(int status) {
+    int i, j, player = 0;
+    if (status == 1) {
+        for (i = 0; i < 8; i++) {
+            for (j = 0; j < ; j++) {
+                if (desk[i][j] == 'q') {
+                    player = 1;
+                }
+            }
+        }
+    }
+    if (status == 2) {
+        for (i = 0; i < 8; i++) {
+            for (j = 0; j < 8; j++) {
+                if (desk[i][j] == 'Q') {
+                    player = 2;
+                }
+            }
+        }
+    }
+
+    if (player == 0) {
+        return status;
+    }
+    return 0;
+}
