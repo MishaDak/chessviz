@@ -5,8 +5,7 @@
 extern char desk[8][8];
 int X1, X2, Y1, Y2;
 
-void scanan(int flag)
-{
+void scanan(int flag) {
     char input[7] = "NULL";
     while (1) {
         while (1) {
@@ -33,8 +32,7 @@ void scanan(int flag)
     }
 }
 
-int chartoint(char input[7])
-{
+int chartoint(char input[7]) {
     X1 = (int)input[0] - 'A';
     Y1 = (int)input[1] - '1';
     X2 = (int)input[3] - 'A';
@@ -45,8 +43,7 @@ int chartoint(char input[7])
     return 0;
 }
 
-int white()
-{
+int white() {
     if ((desk[Y2][X2] > 'A') && (desk[Y2][X2] < 'S')) {
         return 0;
     }
@@ -98,7 +95,7 @@ int white()
             return 1;
         }
         break;
-    case 'B' :
+    case 'B':
         if (checkD()) {
             return 1;
         }
@@ -109,8 +106,8 @@ int white()
         }
         break;
     case 'Q':
-        if ((Y1 - Y2 != 1) && (Y2 - Y1 != 1)
-            && ((X1 - X2 != 1) && (X2 - X1 != 1))) {
+        if ((Y1 - Y2 != 1) && (Y2 - Y1 != 1) &&
+            ((X1 - X2 != 1) && (X2 - X1 != 1))) {
             break;
         } else {
             return 1;
@@ -119,8 +116,7 @@ int white()
     }
     return 0;
 }
-int black()
-{
+int black() {
     if ((desk[Y2][X2] > 'a') && (desk[Y2][X2] < 's')) {
         return 0;
     }
@@ -183,7 +179,8 @@ int black()
         }
         break;
     case 'q':
-        if ((Y1 - Y2 != 1) && (Y2 - Y1 != 1) && ((X1 - X2 != 1) && (X2 - X1 != 1))) {
+        if ((Y1 - Y2 != 1) && (Y2 - Y1 != 1) &&
+            ((X1 - X2 != 1) && (X2 - X1 != 1))) {
             break;
         } else {
             return 1;
@@ -191,8 +188,7 @@ int black()
     }
     return 0;
 }
-void move()
-{
+void move() {
     desk[Y2][X2] = desk[Y1][X1];
     desk[Y1][X1] = ' ';
 }
@@ -216,8 +212,7 @@ int checkY()
     return 1;
 }
 
-int checkX()
-{
+int checkX() {
     int i,  c1 = X1, c2 = X2;
     if (Y1 != Y2) {
         return 0;
@@ -235,8 +230,7 @@ int checkX()
     return 1;
 }
 
-int checkD()
-{
+int checkD() {
     int i, j, c1 = Y2, c2 = Y1, ci, cj;
     if (((Y2 - Y1) != (X2 - X1)) && ((Y2 - Y1) != (X1 - X2))) {
         return 0;

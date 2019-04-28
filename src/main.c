@@ -2,8 +2,7 @@
 #include "board_print_plain.h"
 #include <stdio.h>
 
-int main()
-{
+int main() {
     printdesk();
     while (1) {
         printf("Белые (Большие буквы):");
