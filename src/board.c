@@ -6,8 +6,7 @@ extern char desk[8][8];
 int X1, X2, Y1, Y2;
 extern char input[7];
 
-void scanan(int flag)
-{
+void scanan(int flag) {
     while (1) {
         while (1) {
             fgets(input, 7, stdin);
@@ -33,8 +32,7 @@ void scanan(int flag)
     }
 }
 
-int chartoint(char input[7])
-{
+int chartoint(char input[7]) {
     if ((input[2] != '-') && (input[2] != 'x')) {
         return 0;
     }
@@ -52,8 +50,7 @@ int chartoint(char input[7])
     return 0;
 }
 
-int white()
-{
+int white() {
     if ((desk[Y2][X2] > 'A') && (desk[Y2][X2] < 'S')) {
         return 0; //не рубим своих
     }
@@ -152,8 +149,7 @@ int white()
     }
     return 0;
 }
-int black()
-{
+int black() {
     if ((desk[Y2][X2] > 'a') && (desk[Y2][X2] < 's')) {
         return 0; //не рубим своих
     }
@@ -250,8 +246,7 @@ int black()
     }
     return 0;
 }
-void move()
-{
+void move() {
     desk[Y2][X2] = desk[Y1][X1];
     desk[Y1][X1] = ' ';
 }
@@ -275,8 +270,7 @@ int checkY() {
     return 1;
 }
 
-int checkX()
-{
+int checkX() {
     int i, c1 = X1, c2 = X2;
     if (Y1 != Y2) {
         return 0;
@@ -294,8 +288,7 @@ int checkX()
     return 1;
 }
 
-int checkD()
-{
+int checkD() {
     int i, j, c1 = Y2, c2 = Y1, ci, cj;
     if (((Y2 - Y1) != (X2 - X1)) && ((Y2 - Y1) != (X1 - X2))) {
         return 0;
@@ -325,8 +318,7 @@ int checkD()
     return 1;
 }
 
-void transformPawn()
-{
+void transformPawn() {
     char npawn;
     if ((desk[Y1][X1] == 'p') && (Y2 == 0)) {
         while (1) {
@@ -356,8 +348,7 @@ void transformPawn()
     }
 }
 
-int checkWin(int status)
-{
+int checkWin(int status) {
     int i, j, player = 0;
     if (status == 1) {
         for (i = 0; i < 8; i++) {

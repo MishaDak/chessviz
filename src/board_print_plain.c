@@ -10,8 +10,7 @@ char desk[8][8] = {{'R', 'N', 'B', 'K', 'Q', 'B', 'N', 'R'},
                    {'p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'},
                    {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'}};
 
-void printdesk()
-{
+void printdesk() {
     int i, j;
     for (i = 7; i >= 0; i--) {
         printf("%d ", i + 1);
