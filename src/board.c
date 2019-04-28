@@ -47,7 +47,7 @@ int chartoint(char input[7])
 
 int white()
 {
-    if (desk[Y1][X1] > 'A' && desk[Y1][X1] < 'S') {
+    if ((desk[Y2][X2] > 'A') && (desk[Y2][X2] < 'S')) {
         return 0;
     }
     switch (desk[Y1][X1]) {
@@ -109,7 +109,8 @@ int white()
         }
         break;
     case 'Q':
-        if ((Y1 - Y2 != 1) && (Y2 - Y1 != 1) && ((X1 - X2 != 1) && (X2 - X1 != 1))) {
+        if ((Y1 - Y2 != 1) && (Y2 - Y1 != 1)
+            && ((X1 - X2 != 1) && (X2 - X1 != 1))) {
             break;
         } else {
             return 1;
@@ -207,7 +208,8 @@ int checkY()
         c2 = Y1;
     }
     for (i = c1 + 1; i < c2; i++) {
-        if ((desk[i][X1] > 'a' && desk[i][X1] < 's') || (desk[i][X1] > 'A' && desk[i][X1] < 'S')) {
+        if ((desk[i][X1] > 'a' && desk[i][X1] < 's')
+            || (desk[i][X1] > 'A' && desk[i][X1] < 'S')) {
             return 0;
         }
     }
@@ -225,7 +227,8 @@ int checkX()
         c2 = X1;
     }
     for (i = c1 + 1; i < c2; i++) {
-        if ((desk[Y1][i] > 'a' && desk[Y1][i] < 's') || (desk[Y1][i] > 'A' && desk[Y1][i] < 'S')) {
+        if ((desk[Y1][i] > 'a' && desk[Y1][i] < 's')
+            || (desk[Y1][i] > 'A' && desk[Y1][i] < 'S')) {
             return 0;
         }
     }
@@ -253,7 +256,8 @@ int checkD()
     i = Y1 + ci;
     j = X1 + cj;
     while ((i < c2) && (i > c1)) {
-        if (((desk[i][j] > 'a') && (desk[i][j] < 's')) ||((desk[i][j] > 'A') && (desk[i][j] < 'S'))) {
+        if (((desk[i][j] > 'a') && (desk[i][j] < 's'))
+            || ((desk[i][j] > 'A') && (desk[i][j] < 'S'))) {
             return 0;
         }
         i += ci;
