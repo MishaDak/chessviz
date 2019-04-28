@@ -17,7 +17,7 @@ int main()
         scanan(1);
         move();
         printdesk();
-        status = checkWIn(1);
+        status = checkWin(1);
         if (status != 0) {
             break;
         }
@@ -26,7 +26,7 @@ int main()
         scanan(2);
         move();
         printdesk();
-        status = checkWIn(2);
+        status = checkWin(2);
         if (status != 0) {
             break;
         }

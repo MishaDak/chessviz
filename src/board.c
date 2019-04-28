@@ -356,7 +356,7 @@ void transformPawn()
     }
 }
 
-int checkWIn(int status)
+int checkWin(int status)
 {
     int i, j, player = 0;
     if (status == 1) {

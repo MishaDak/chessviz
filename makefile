@@ -11,7 +11,7 @@ build/src/board_print_plain.o: src/board_print_plain.c
 
 build/src/board.o: src/board.c
 	gcc -Wall -Werror -c src/board.c -o build/src/board.o
-	
+
 .PHONY: clean
 
 clean:
