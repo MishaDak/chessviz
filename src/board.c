@@ -256,8 +256,7 @@ void move()
     desk[Y1][X1] = ' ';
 }
 
-int checkY()
-{
+int checkY() {
     int i, c1 = Y1, c2 = Y2;
     if (X1 != X2) {
         return 0;
@@ -266,7 +265,8 @@ int checkY()
         c1 = Y2;
         c2 = Y1;
     }
-    for (i = c1 + 1; i < c2; i++) {
+    for (i = c1 + 1; i < c2; i++)
+    {
         if ((desk[i][X1] > 'a' && desk[i][X1] < 's')
             || (desk[i][X1] > 'A' && desk[i][X1] < 'S')) {
             return 0;
@@ -361,7 +361,7 @@ int checkWIn(int status)
     int i, j, player = 0;
     if (status == 1) {
         for (i = 0; i < 8; i++) {
-            for (j = 0; j < 8; j++) {
+            for (j = 0;j < 8; j++) {
                 if (desk[i][j] == 'q') {
                     player = 1;
                 }
