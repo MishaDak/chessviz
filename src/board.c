@@ -53,13 +53,13 @@ int white()
     switch (desk[Y1][X1]) {
     case 'P':
         if ((desk[Y2][X2] == ' ') && (Y1 == 1) && (X1 == X2) && (Y2 - Y1 > 0)
-            && (Y2 - Y1 < 3) && checkY) {
+            && (Y2 - Y1 < 3) && checkY()) {
             return 1;
         }
         if ((desk[Y2][X2] == ' ') && (X2 == X1) && (Y2 - Y1 == 1)) {
             return 1;
         }
-        if ((desk[Y2][X2] > 's' && desk[Y2][X2] < 'a')
+        if ((desk[Y2][X2] < 's' && desk[Y2][X2] > 'a')
             && ((X2 - X1 == 1) || (X2 - X1 == -1)) && (Y2 - Y1 == 1)) {
             return 1;
         }
@@ -114,6 +114,7 @@ int white()
         } else {
             return 1;
         }
+        break;
     }
     return 0;
 }
@@ -148,25 +149,25 @@ int black()
         if ((Y1 - Y2 == 2) && (X1 - X2 == 1)) {
             return 1;
         }
-        if ((Y2-Y1 == 2) && (X2 - X1 == 1)) {
+        if ((Y2 - Y1 == 2) && (X2 - X1 == 1)) {
             return 1;
         }
-        if ((Y2-Y1 == 2) && (X1-X2 == 1)) {
+        if ((Y2 - Y1 == 2) && (X1 - X2 == 1)) {
             return 1;
         }
-        if ((Y1-Y2 == 2) && (X2-X1 == 1)) {
+        if ((Y1 - Y2 == 2) && (X2 - X1 == 1)) {
             return 1;
         }
-        if ((Y1-Y2 == 1) && (X2-X1 == 2)) {
+        if ((Y1 - Y2 == 1) && (X2 - X1 == 2)) {
             return 1;
         }
-        if ((Y2-Y1 == 1) && (X2-X1 == 2)) {
+        if ((Y2 - Y1 == 1) && (X2 - X1 == 2)) {
             return 1;
         }
-        if ((Y1-Y2 == 1) && (X1-X2 == 2)) {
+        if ((Y1 - Y2 == 1) && (X1 - X2 == 2)) {
             return 1;
         }
-        if ((Y2-Y1 == 1) && (X1-X2 == 2)) {
+        if ((Y2 - Y1 == 1) && (X1 - X2 == 2)) {
             return 1;
         }
         break;
@@ -195,7 +196,8 @@ void move()
     desk[Y1][X1] = ' ';
 }
 
-int checkY() {
+int checkY()
+{
     int i, c1 = Y1, c2 = Y2;
     if (X1 != X2) {
         return 0;
@@ -212,7 +214,8 @@ int checkY() {
     return 1;
 }
 
-int checkX() {
+int checkX()
+{
     int i,  c1 = X1, c2 = X2;
     if (Y1 != Y2) {
         return 0;
@@ -229,7 +232,8 @@ int checkX() {
     return 1;
 }
 
-int checkD() {
+int checkD()
+{
     int i, j, c1 = Y2, c2 = Y1, ci, cj;
     if (((Y2 - Y1) != (X2 - X1)) && ((Y2 - Y1) != (X1 - X2))) {
         return 0;
