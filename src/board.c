@@ -76,7 +76,7 @@ int white() {
         break;
     case 'R':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         if ((Y2 == Y1) && (checkX())) {
@@ -118,7 +118,7 @@ int white() {
         break;
     case 'B':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         if (checkD()) {
@@ -127,13 +127,13 @@ int white() {
         break;
     case 'K':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         break;
     case 'Q':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         if (checkX() || checkY() || checkD()) {
@@ -150,7 +150,7 @@ int black() {
     switch (desk[Y1][X1]) {
     case 'p':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         if ((desk[Y2][X2] == ' ') && (Y1 == 6) && (X1 == X2) && (Y1 - Y2 > 0)
@@ -168,7 +168,7 @@ int black() {
         break;
     case 'r':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         if ((Y2 == Y1) && (checkX())) {
@@ -180,7 +180,7 @@ int black() {
         break;
     case 'n':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         if ((Y1 - Y2 == 2) && (X1 - X2 == 1)) {
@@ -210,7 +210,7 @@ int black() {
         break;
     case 'b':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         if (checkD()) {
@@ -219,12 +219,12 @@ int black() {
         break;
     case 'k':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
     case 'q':
         if ((input[2] == '-') && (desk[Y2][X2] != ' ')) {
-            printf('Вроде надо рубить?\n');
+            printf("Вроде надо рубить?\n");
             break;
         }
         if (checkX() || checkY() || checkD()) {

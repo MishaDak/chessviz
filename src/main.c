@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main() {
-    printf(" Шахматы\n")
+    printf(" Шахматы\n");
     printf("Пример обычного хода: E2-E4\n");
     printf("Пример хода взятия: E2xE4\n");
     printdesk();
