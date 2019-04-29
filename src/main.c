@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 char input[7];
-int X1,X2,Y1,Y2;
+int X1, X2, Y1, Y2;
 char desk[8][8] = {{'R', 'N', 'B', 'K', 'Q', 'B', 'N', 'R'},
                    {'P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'},
                    {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
