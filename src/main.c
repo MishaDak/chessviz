@@ -3,35 +3,35 @@
 #include <stdio.h>
 
 int main() {
-    int status = 0;
+  int status = 0;
 
-    printf("     Шахматы\n");
-    printf("Пример обычного хода: E2-E4\n");
-    printf("Пример хода взятия: E2xE4\n");
+  printf("     Шахматы\n");
+  printf("Пример обычного хода: E2-E4\n");
+  printf("Пример хода взятия: E2xE4\n");
 
+  printdesk();
+
+  while (1) {
+    printf("Белые (Большие буквы):");
+    scanan(1);
+    move();
     printdesk();
-
-    while (1) {
-        printf("Белые (Большие буквы):");
-        scanan(1);
-        move();
-        printdesk();
-        status = checkWin(1);
-        if (status != 0) {
-            break;
-        }
-
-        printf("Черные (Маленькие буквы):");
-        scanan(2);
-        move();
-        printdesk();
-        status = checkWin(2);
-        if (status != 0) {
-            break;
-        }
+    status = checkWin(1);
+    if (status != 0) {
+      break;
     }
 
-    printf("Player %d win\n", status);
+    printf("Черные (Маленькие буквы):");
+    scanan(2);
+    move();
+    printdesk();
+    status = checkWin(2);
+    if (status != 0) {
+      break;
+    }
+  }
 
-    return 0;
+  printf("Player %d win\n", status);
+
+  return 0;
 }
