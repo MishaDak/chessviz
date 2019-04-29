@@ -2,3 +2,5 @@
 main
 *.o
 chessviz
+test
+chessviz-test
