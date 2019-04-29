@@ -1,4 +1,5 @@
 .clang-format
 main
 *.o
-prog
+chessviz
+chessviz-test
