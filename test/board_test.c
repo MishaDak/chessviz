@@ -524,4 +524,28 @@ CTEST(moving, movequeen) // Тест ферзя
     ASSERT_EQUAL(exp8, c8);
     ASSERT_EQUAL(exp9, c9);
     ASSERT_EQUAL(exp10, c10);
-} 
+}
+CTEST(signs ,sign)
+{
+    strcpy(input, "E2fE4"); // Ввод неправильного формата
+    int c1 = chartoint(input);
+
+    strcpy(input, "E2xE4"); // Ход взятия
+    int c2 = chartoint(input);
+
+    strcpy(input, "E2-E4"); // Обычный ход
+    int c3 = chartoint(input);
+
+    strcpy(input, "E2#E9"); // Неправилный знак
+    int c4 = chartoint(input);
+
+    const int exp1 = 0;
+    const int exp2 = 0;
+    const int exp3 = 1;
+    const int exp4 = 0;
+
+    ASSERT_EQUAL(exp1, c1);
+    ASSERT_EQUAL(exp2, c2);
+    ASSERT_EQUAL(exp3, c3);
+    ASSERT_EQUAL(exp4, c4);
+}
